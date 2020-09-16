@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/azure-cli:mcr.microsoft.com/azure-cli
+FROM mcr.microsoft.com/azure-cli:latest
 
 RUN wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 RUN dpkg -i packages-microsoft-prod.deb
