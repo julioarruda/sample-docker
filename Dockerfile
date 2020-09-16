@@ -7,6 +7,10 @@ RUN mkdir -p "$HOME/dotnet" && tar zxf dotnet-sdk-3.1.402-linux-musl-x64.tar.gz 
 RUN export DOTNET_ROOT=$HOME/dotnet
 RUN export PATH=$PATH:$HOME/dotnet
 
+RUN echo $PATH
+
 RUN dotnet tool install --global PowerShell
+
+RUN export PATH="$PATH:/root/.dotnet/tools"
 
 RUN pwsh -c 'Install-Module -Name Az -Confirm:$False -Force'
