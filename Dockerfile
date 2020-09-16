@@ -1,7 +1,11 @@
 FROM ghcr.io/julioarruda/testeps:latest
 
-RUN dotnet tool install --global PowerShell
 
-RUN export PATH="$PATH:/root/.dotnet/tools"
+ENV PATH "$PATH:$HOME/dotnet:/root/.dotnet/tools"
+
+ENV DOTNET_ROOT "$HOME/dotnet"
+
+
+RUN dotnet tool install --global PowerShell
 
 RUN pwsh -c 'Install-Module -Name Az -Confirm:$False -Force'
