@@ -8,6 +8,7 @@ FROM mcr.microsoft.com/powershell:preview
 #RUN export PATH=$PATH:$HOME/dotnet
 
 #RUN echo $PATH
+LABEL org.opencontainers.image.source https://github.com/julioarruda/sample-docker
 
 #RUN dotnet tool install --global PowerShell
 
