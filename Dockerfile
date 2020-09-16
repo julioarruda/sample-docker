@@ -9,8 +9,8 @@ RUN export PATH=$PATH:$HOME/dotnet
 
 RUN echo $PATH
 
-RUN dotnet tool install --global PowerShell
+#RUN dotnet tool install --global PowerShell
 
-RUN export PATH="$PATH:/root/.dotnet/tools"
+#RUN export PATH="$PATH:/root/.dotnet/tools"
 
-RUN pwsh -c 'Install-Module -Name Az -Confirm:$False -Force'
+#RUN pwsh -c 'Install-Module -Name Az -Confirm:$False -Force'
