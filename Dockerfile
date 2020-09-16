@@ -1,4 +1,3 @@
 FROM mcr.microsoft.com/powershell:preview
 
-
-RUN Install-Module Az -Confirm:$False -Force
+RUN pwsh -ex unrestricted -noni -Command Install-Module -Name Az
