@@ -12,7 +12,7 @@ FROM mcr.microsoft.com/powershell:preview
 #RUN dotnet tool install --global PowerShell
 
 #RUN export PATH="$PATH:/root/.dotnet/tools"
-SHELL ["CMD"]
+RUN exit
 RUN curl -sL https://aka.ms/InstallAzureCLIDeb |  bash
 
 RUN pwsh -c 'Install-Module -Name Az -Confirm:$False -Force'
